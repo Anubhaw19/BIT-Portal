@@ -3,12 +3,14 @@ package com.hnccbits.bit_portal;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -61,6 +63,8 @@ public class StartActivity extends AppCompatActivity {
     {
 
         auth.signInWithEmailAndPassword(text_id,text_password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            
+
             @Override
             public void onSuccess(AuthResult authResult)
             {
